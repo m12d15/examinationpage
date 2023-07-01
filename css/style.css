@@ -52,67 +52,67 @@ a:hover {
     text-shadow: 0 0 5px #008cff,
         0 0 10px #008cff,
         0 0 20px #008cff;
+
 }
 
 
 
-.box{
+.box {
     width: 100%;
     height: auto;
 }
 
 /* TEXT START */
 
+.title__h1{
+   
+}
+
 .text_title_h2 {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 44px;
-    line-height: 66px;
     background: linear-gradient(79.62deg, rgba(255, 255, 255, 0.72) -8.51%, #FFFFFF 35.28%, rgba(169, 198, 215, 0.64) 101.59%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: calc(28px + 16 * (100vw - 376px) / 1920);
 }
 
 .text_blue {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
-    line-height: 36px;
     color: var(--text-second-color);
     order: 1;
     align-self: stretch;
+    font-size: calc(18px + 10 * (100vw - 376px) / 1920);
 }
 
 .text_small_blue {
     font-family: 'Poppins', sans-serif;
     color: var(--text-second-color);
-    font-size: 16px;
-    line-height: 24px;
+    font-size: calc(14px + 2 * (100vw - 376px) / 1920);
 }
 
 .text_yellow {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 36px;
     color: #FFEF64;
     order: 1;
     align-self: stretch;
+    font-size: calc(20px + 4 * (100vw - 376px) /1920);
 }
 
 .text_title_h3 {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
-    line-height: 36px;
     background: linear-gradient(79.62deg, rgba(255, 255, 255, 0.72) -8.51%, #FFFFFF 35.28%, rgba(169, 198, 215, 0.64) 101.59%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: #f3e4e4;
     background-clip: text;
+    font-size: calc(18px + 6 * (100vw - 376px) / 1920);
 
 }
 
@@ -120,24 +120,23 @@ a:hover {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
+
     text-align: center;
+    font-size: calc(14px + 2 * (100vw - 376px) / 1920);
 }
 
 .text_small_white {
     font-family: 'Poppins', sans-serif;
     color: var(--text-main-color);
     font-size: 12px;
-    line-height: 18px;
     text-align: center;
+
 }
 
 .text_footer {
     font-family: 'Poppins', sans-serif;
     color: #465A79;
     font-size: 12px;
-    line-height: 18px;
     text-align: center;
 }
 
@@ -191,18 +190,32 @@ a:hover {
 .header__links {
     /* параметры ссылок верхнего меню */
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
+
     text-decoration: none;
     color: var(--text-main-color);
-    line-height: 24px;
+    font-size: calc(14px + 2 * (100vw - 376px) / 1920);
+
 }
-
-
 
 .header__language {
     display: flex;
     align-items: center;
     padding: 10px;
+    position: relative;
+    display: inline-block;
+
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 44px;
+    height: 216px;
+}
+
+.header__language:hover .dropdown-content {
+    display: block;
 }
 
 .header__social {
@@ -210,6 +223,24 @@ a:hover {
     align-items: center;
     gap: 2px;
 }
+
+
+.icon_rotate {
+    transition: all 300ms ease;
+
+}
+
+.icon_rotate:hover {
+    transform: rotate(20deg);
+    background: #008cff;
+    border: 1px solid #008cff;
+    box-shadow: 0 0 8px #008cff,
+        0 0 20px #008cff,
+        0 0 50px #008cff,
+        0 0 100px #008cff;
+}
+
+
 
 /* HEADER END */
 
@@ -232,6 +263,7 @@ a:hover {
 
 .nav__title {
     padding-top: 30px;
+  
 }
 
 
@@ -240,11 +272,11 @@ a:hover {
 
 .title {
     font-weight: 600;
-    font-size: 56px;
-    line-height: 84px;
     background: linear-gradient(79.62deg, rgba(255, 255, 255, 0.72) -8.51%, #FFFFFF 35.28%, rgba(169, 198, 215, 0.64) 101.59%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: calc(36px + 20 * (100vw - 376px) / 1920);
+
 
 }
 
@@ -255,6 +287,13 @@ a:hover {
     justify-content: space-around;
     padding-top: 30px;
 }
+
+.nav__button_inf {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
 
 .button_blue {
     /* основная  синяя кнопка*/
@@ -276,8 +315,9 @@ a:hover {
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
-    line-height: 27px;
+    z-index: 1;
     text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
 }
 
 .button_blue:hover {
@@ -312,9 +352,8 @@ a:hover {
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
-    line-height: 27px;
     text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
-
+cursor: pointer;
     z-index: 1;
 }
 
@@ -397,16 +436,14 @@ a:hover {
 .name_info {
     text-decoration: 'Poppins', sans-serif;
     color: var(--text-second-color);
-    font-size: 16px;
-    line-height: 24px;
     font-weight: bold;
+    font-size: calc(14px + 2 * (100vw - 376px) / 1920);
 }
 
 .tally_info {
     font-family: 'Poppins', sans-serif;
     color: var(--text-main-color);
     font-size: 32px;
-    line-height: 48px;
     font-weight: bold;
 }
 
@@ -423,7 +460,7 @@ a:hover {
     grid-template-columns: 870px 1.3fr 1fr;
     justify-items: start;
     gap: 20px;
-    height: 650px;
+
 }
 
 .descript__text {
@@ -447,7 +484,7 @@ a:hover {
     filter: blur(256px);
 }
 
-.img_coin{
+.img_coin {
     margin-top: -130px;
 }
 
@@ -459,7 +496,6 @@ a:hover {
     display: flex;
     gap: 50px;
     margin-top: 90px;
-    flex-wrap: wrap;
     justify-content: space-around;
 }
 
@@ -498,7 +534,6 @@ a:hover {
     font-size: 16px;
     text-decoration: none;
     color: var(--text-main-color);
-    line-height: 24px;
 }
 
 .card__text_indent {
@@ -520,9 +555,8 @@ a:hover {
     color: var(--text-main-color);
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
     flex-direction: row;
+    font-size: calc(14px + 2 * (100vw - 376px) / 1920);
 }
 
 .block__chart {}
@@ -544,6 +578,7 @@ a:hover {
     flex-direction: row;
     /* flex-wrap: wrap; */
     padding-top: 100px;
+    align-items: center;
 }
 
 .block_sustainable {
@@ -552,6 +587,7 @@ a:hover {
     grid-template-columns: 1fr 0.3fr;
     justify-items: end;
     gap: 20px;
+    align-items: end;
 }
 
 .second_shine_background {
@@ -561,6 +597,11 @@ a:hover {
     opacity: 0.2;
     background: radial-gradient(66.1% 66.1% at 50% 17.8%, #29C5F6 0%, #1C8ADE 100%), #29C5F6;
     filter: blur(400px);
+}
+
+.waves{
+    position: absolute;
+    right: -90px;
 }
 
 /* SECTION Sustainable END */
@@ -675,6 +716,18 @@ a:hover {
     align-items: center;
 }
 
+.stick{
+    width: 15px;
+    height: 23px;
+    padding-left: 50px;
+}
+
+.stick__indent{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
 .mod__right_card {
     display: flex;
     flex-direction: column;
@@ -730,6 +783,7 @@ a:hover {
     flex-direction: row;
     justify-content: flex-start;
     gap: 20px;
+    align-items: center;
 }
 
 .table__buy {
@@ -791,9 +845,11 @@ a:hover {
 .roadmap {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     flex-wrap: wrap;
-    padding-top: 250px;
+    padding-top: 100px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
 }
 
 
@@ -962,18 +1018,38 @@ a:hover {
 /* MEDIA REQUESTS START*/
 
 
-@media (max-width: 1280px) {
+@media (max-width: 1338px) {
 
-    .img_boomerang{
+    .img_boomerang {
         margin-left: 180px;
+    }
+
+}
+
+@media (max-width: 1200px) {
+
+    .img_boomerang {
+        margin-left: 45px;
+    }
+
+}
+
+@media (max-width: 1120px) {
+
+    .img_boomerang {
+        margin-left: 20px;
     }
 
 }
 
 @media (max-width: 1225px) {
 
-    .header__social{
+    .header__social {
         display: none;
+    }
+
+    .descript__info {
+        grid-template-columns: repeat( auto-fit, minmax(209px, 1fr) );
     }
 
 
@@ -989,8 +1065,9 @@ a:hover {
         flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
-      
+
     }
+
     .chart_info {
         display: flex;
         flex-direction: row;
@@ -1001,7 +1078,7 @@ a:hover {
     }
 
 
-    .card__img{
+    .card__img {
         display: none;
     }
 
@@ -1016,7 +1093,7 @@ a:hover {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        padding-top: 250px;
+        padding-top: 60px;
         gap: 60px;
         align-items: center;
     }
@@ -1055,6 +1132,11 @@ a:hover {
         display: none;
 
     }
+    .descript__info {
+        align-items: end;
+    }
+
+
 
     .shine_background {
         display: none;
@@ -1072,14 +1154,30 @@ a:hover {
         display: none;
     }
 
-    .nav__info{
+    .nav__info {
         justify-content: space-around;
     }
 
 
-   
+  
 
+    .descript__text {
+        padding-top: 2px;
+    }
 
+    .main__card {
+        flex-wrap: wrap;
+    }
+
+    .block_sustainable {
+        display: flex;
+        gap: 20px;
+        flex-direction: column-reverse;
+    }
+
+    .description__block_sustainable {
+        justify-content: center;
+    }
 
 }
 
@@ -1087,18 +1185,10 @@ a:hover {
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 770px) {
 
-   
-
-    .text_small_blue {
-        font-size: 14px;
-    }
-
-
-    .title {
-        font-size: 36px;
-
+    .footer__social {
+        justify-content: space-around;
     }
 
     .nav__button {}
@@ -1109,36 +1199,32 @@ a:hover {
         width: 320px;
     }
 
-
+    .nav__info {
+        display: contents;
+    }
 
     .nav__info_supply {
         flex-direction: column;
         align-items: center;
         gap: 40px;
-      
+        padding: 30px;
     }
 
-    .name_info {
-        font-size: 14px;
+    .nav__position {
+        gap: 44px;
+    }
+
+
+    .mod__function {
+        gap: 44px;
     }
 
     .nav__column_info {
         align-items: center;
     }
 
-    .text_title_h2 {
-        font-size: 28px;
-    }
 
-    .text_blue {
-        font-size: 18px;
-    }
 
-    .descript__info {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-    }
 
     .descript__text {
         padding-top: 5px;
@@ -1158,11 +1244,7 @@ a:hover {
         padding-top: 5px;
     }
 
-    .block_sustainable {
-        display: flex;
-        gap: 20px;
-        flex-direction: column-reverse;
-    }
+
 
     .mod__function_position {
         display: flex;
@@ -1210,7 +1292,7 @@ a:hover {
     }
 
     .initial {
-        display: flex;
+        display: block;
         padding-top: 50px;
         flex-direction: column;
     }
@@ -1237,7 +1319,18 @@ a:hover {
 
     .roadmap__phase_cells {
         gap: 50px;
-  
+
+    }
+
+
+    .footer__social {
+        justify-content: space-evenly;
+    }
+
+    .descript__info {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
     }
 
 }
