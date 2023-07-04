@@ -18,6 +18,10 @@ body {
     background: var(--bg-color)
 }
 
+.logo {
+    width: 100%;
+    height: auto;
+}
 
 
 .container {
@@ -64,9 +68,7 @@ a:hover {
 
 /* TEXT START */
 
-.title__h1{
-   
-}
+.title__h1 {}
 
 .text_title_h2 {
     font-family: 'Poppins', sans-serif;
@@ -86,12 +88,14 @@ a:hover {
     /* order: 1; */
     /* align-self: stretch; */
     font-size: calc(14px + 4 * (100vw - 376px) / 1920);
+    text-decoration: none;
 }
 
 .text_small_blue {
     font-family: 'Poppins', sans-serif;
     color: var(--text-second-color);
     font-size: calc(12px + 2 * (100vw - 376px) / 1920);
+    text-decoration: none;
 }
 
 
@@ -156,13 +160,11 @@ a:hover {
     /* расположение лого и ссылко верхнего меню */
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     gap: 50px;
 }
 
-.header__logo {}
 
 .header__menu {
     display: flex;
@@ -250,9 +252,7 @@ a:hover {
 
 /* NAVIGATION START */
 
-.nav {
-    border-right: 1px solid #66686A52;
-}
+
 
 .nav__position {
     display: flex;
@@ -268,7 +268,7 @@ a:hover {
 
 .nav__title {
     padding-top: 30px;
-  
+
 }
 
 
@@ -343,7 +343,10 @@ a:hover {
 }
 
 
-
+.line {
+    border-right: 1px solid #66686A52;
+    margin: 30px;
+}
 
 
 .img_boomerang {
@@ -373,13 +376,13 @@ a:hover {
 }
 
 .nav__info_supply {
-        display: flex;
-        gap: 20px;
-        border-radius: 4px;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: flex-start;
-    
+    display: flex;
+    gap: 20px;
+    border-radius: 4px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
 
 }
 
@@ -401,18 +404,18 @@ a:hover {
     color: var(--text-main-color);
     font-size: 24px;
     font-weight: bold;
-    
+
 }
 
-.tally_blue{
-     font-family: 'Poppins', sans-serif;
+.tally_blue {
+    font-family: 'Poppins', sans-serif;
     color: var(--text-second-color);
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
 }
 
-.text_indent{
+.text_indent {
     display: flex;
     /* padding: 25px 29px 25px 30px; */
     align-items: flex-end;
@@ -437,7 +440,9 @@ a:hover {
 
 /* SECTION 3-cards START */
 
-.holders , .circulating , .supply{
+.holders,
+.circulating,
+.supply {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -445,7 +450,7 @@ a:hover {
     height: auto;
 }
 
-.card{
+.card {
     display: flex;
     gap: 20px;
     flex-direction: row;
@@ -456,7 +461,7 @@ a:hover {
 
 
 
-.second__card{
+.second__card {
     display: flex;
     gap: 20px;
     flex-direction: row;
@@ -474,7 +479,7 @@ a:hover {
 
 }
 
-.second__card_indent{
+.second__card_indent {
     border: 1px solid;
     border-image-slice: 1;
     border-image-source: linear-gradient(88.43deg, #88D3FD 0.4%, rgba(0, 82, 129, 0.36) 28.93%, rgba(30, 144, 208, 0.42) 57.97%, #42A9CE 99.98%);
@@ -488,7 +493,7 @@ a:hover {
 }
 
 
-.topic{
+.topic {
     background: var(--bg-color);
     display: flex;
     max-width: 344px;
@@ -497,7 +502,8 @@ a:hover {
     justify-content: center;
     align-items: center;
 }
-.bg{
+
+.bg {
     background: var(--gr, linear-gradient(214deg, rgba(25, 44, 61, 0.48) 0%, rgba(14, 44, 71, 0.48) 100%));
 
 }
@@ -527,15 +533,41 @@ a:hover {
     filter: blur(256px);
 }
 
-
 /* SECTION 3-cards END */
-
-
-
-
 /* MAIN END */
 
 
+
+/*FOOTER START*/
+
+
+.footer {
+    margin-top: 40px;
+    border-top: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(88.43deg, #88D3FD 0.4%, rgba(0, 82, 129, 0.36) 28.93%, rgba(30, 144, 208, 0.42) 57.97%, #42A9CE 99.98%);
+    background-color: #000;
+
+}
+
+.mob__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 5px;
+}
+
+.mob__nav_position {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
+/*FOOTER END*/
 
 
 
@@ -543,7 +575,41 @@ a:hover {
 
 /* MEDIA REQUESTS START*/
 
+@media (max-width: 1360px) {
+
+    .first_shine_backgraund {
+
+        display: none;
+
+    }
+
+}
+
+@media (max-width: 770px) {
+
+    .nav__position {
+
+        display: none;
+
+    }
+
+    .line {
+
+        display: none;
+
+    }
+
+}
 
 
+@media (min-width: 770px) {
+
+    .footer {
+
+        display: none;
+
+    }
+
+}
 
 /* MEDIA REQUESTS END*/

@@ -1335,6 +1335,28 @@ cursor: pointer;
 
 }
 
+@media (max-width: 450px) {
 
+    .button_black {
+        padding: 24px 42px;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .button_black {
+        padding: 24px 30px;
+    }
+
+}
+
+@media (max-width: 370px) {
+
+    .button_black {
+        padding: 24px 20px;
+    }
+
+}
 
 /* MEDIA REQUESTS END*/
