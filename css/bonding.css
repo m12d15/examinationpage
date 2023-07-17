@@ -36,6 +36,52 @@ body {
     overflow: hidden;
 }
 
+/* полоса прокрутки */
+::-webkit-scrollbar {
+    width: 15px;
+    height: 15px; 
+    background-color: #143861;
+}
+
+/* ползунок */
+::-webkit-scrollbar-thumb {
+   border-radius: 6px;
+background: #29C5F6;
+}
+
+/* Стрелки */
+
+::-webkit-scrollbar-button:vertical:start:decrement {
+    background: linear-gradient(120deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(240deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(0deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+    background-color:#29C5F6;
+}
+
+::-webkit-scrollbar-button:vertical:end:increment {
+    background:
+        linear-gradient(300deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(60deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(180deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+    background-color: #29C5F6;
+}
+
+::-webkit-scrollbar-button:horizontal:start:decrement {
+    background:
+        linear-gradient(30deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(150deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(270deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+    background-color: #29C5F6;
+}
+
+::-webkit-scrollbar-button:horizontal:end:increment {
+    background:
+        linear-gradient(210deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(330deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(90deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+    background-color: #29C5F6;
+}
+
 .border_bottom_blue {
     border-bottom: 1px solid #29C5F6;
 }
@@ -62,7 +108,8 @@ a:hover {
 
 .line {
     border-right: 1px solid #66686A52;
-    margin: 30px;
+    margin-right: 30px;
+    margin-left: 30px;
 }
 
 /* TEXT START */
@@ -453,7 +500,7 @@ gap: 10px;
     display: flex;
     gap: 20px;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     pointer-events: none;
     flex-wrap: wrap;
 }
@@ -548,6 +595,7 @@ gap: 10px;
     flex-direction: column;
     gap: 30px;
     padding-top: 70px;
+    align-items: flex-start
 }
 
 .table {
@@ -559,8 +607,17 @@ gap: 10px;
 }
 
 .table__buy {
-   width: 1009px;
-    max-height: 540px;
+    min-width: 1000px;
+    margin: 50px auto;
+}
+
+
+
+.scroll {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: auto;
+  width: 1000px;
 }
 
 .string__blue {
@@ -572,7 +629,7 @@ gap: 10px;
     font-size: 12px;
     display: flex;
     padding: 14px 120px 14px 16px;
-    gap: 35px;
+    gap: 50px;
 }
 
 .string__dark_blue {
@@ -585,7 +642,7 @@ gap: 10px;
     flex-direction: row;
     justify-content: space-between;
     padding: 14px 120px 14px 16px;
-    gap: 12px;
+    gap: 50px;
 
 }
 
@@ -599,9 +656,12 @@ gap: 10px;
     flex-direction: row;
     justify-content: space-between;
     padding: 14px 120px 14px 16px;
-    gap: 12px;
+    gap: 50px;
 }
 
+.table_zone{
+    width: 160px;
+}
 
 
 
@@ -651,16 +711,24 @@ background-color: #000;
     .mobile {
         display: none;
     }
-
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
 
     .first_shine_backgraund {
 
         display: none;
 
     }
+    .holders , .circulating , .supply{
+        flex-direction: column;
+    }
+    
+    .card{
+        justify-content: center;
+    }
+
+  
 
     .desktop {
         display: none;
@@ -673,6 +741,13 @@ background-color: #000;
     }
 }
 
+@media (max-width: 1230px) {
+    .scroll{
+        width: 900px;
+    }
+   
+}
+
 @media (max-width: 1150px) {
 
     .first_shine_backgraund {
@@ -681,15 +756,12 @@ background-color: #000;
 
     }
 
-   
-    .holders , .circulating , .supply{
-        flex-direction: column;
-    }
-    
-    .card{
-        justify-content: center;
+    .scroll{
+        width: 690px;
     }
 
+   
+    
 }
 
 
@@ -702,30 +774,21 @@ background-color: #000;
 
 }
 
-@media (max-width: 790px) {
+@media (max-width: 920px) {
 
-    .nav__position {
-
+    .scroll{
+        width: 590px;
+    }
+    .nav{
         display: none;
-
     }
-    .card{
-        justify-content: center;
-    }
-
-    .line {
-
+    .line{
         display: none;
-
-    }
-
-    .flex {
-        justify-content: center;
     }
 }
 
 
-@media (min-width: 790px) {
+@media (min-width: 920px) {
 
     .footer {
 
@@ -743,6 +806,32 @@ background-color: #000;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
+    }
+
+}
+
+@media (max-width: 605px) {
+
+
+   
+    .scroll{
+        width: 480px;
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    .scroll{
+        width: 390px;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .scroll{
+        width: 300px;
     }
 
 }

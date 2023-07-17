@@ -36,6 +36,57 @@ body {
     overflow: hidden;
 }
 
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* полоса прокрутки */
+::-webkit-scrollbar {
+    width: 15px;
+    height: 15px; 
+    background-color: #143861;
+}
+
+/* ползунок */
+::-webkit-scrollbar-thumb {
+   border-radius: 6px;
+background: #29C5F6;
+}
+
+/* Стрелки */
+
+::-webkit-scrollbar-button:vertical:start:decrement {
+    background: linear-gradient(120deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(240deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(0deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+    background-color:#29C5F6;
+}
+
+::-webkit-scrollbar-button:vertical:end:increment {
+    background:
+        linear-gradient(300deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(60deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(180deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+    background-color: #29C5F6;
+}
+
+::-webkit-scrollbar-button:horizontal:start:decrement {
+    background:
+        linear-gradient(30deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(150deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(270deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+    background-color: #29C5F6;
+}
+
+::-webkit-scrollbar-button:horizontal:end:increment {
+    background:
+        linear-gradient(210deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(330deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(90deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+    background-color: #29C5F6;
+}
+
 .border_bottom_blue {
     border-bottom: 1px solid #29C5F6;
 }
@@ -60,7 +111,8 @@ a:hover {
 }
 .line {
     border-right: 1px solid #66686A52;
-    margin: 30px;
+    margin-right: 30px;
+    margin-left: 30px;
 }
 
 .logo {
@@ -159,7 +211,6 @@ a:hover {
     /* расположение лого и ссылко верхнего меню */
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     gap: 50px;
@@ -458,7 +509,6 @@ a:hover {
     flex-direction: row;
     justify-content: space-evenly;
     pointer-events: none;
-    flex-wrap: wrap;
     border-top: 1px solid #66686A52;
     padding-top: 35px;
 }
@@ -526,7 +576,6 @@ a:hover {
     position: absolute;
     width: 1019px;
     height: 1019px;
-
     background: rgba(22, 154, 250, 0.08);
     filter: blur(256px);
 }
@@ -539,18 +588,29 @@ a:hover {
     flex-direction: column;
     gap: 30px;
     padding-top: 70px;
+    height: 560px;
+    margin-bottom: 200px;
 }
 
 .table {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 20px;
     align-items: center;
 }
 
+.scroll {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    width: 1000px;
+    height: 590px;
+    margin-bottom: 100px;
+  }
+
 .table__buy {
-    width: 1009px;
+    width: 1000px;
     max-height: 222px;
 }
 
@@ -559,13 +619,12 @@ a:hover {
     border-radius: 6px 6px 0px 0px;
     color: #000000;
     font-family: 'Poppins', sans-serif;
-
     font-weight: 400;
     font-size: 12px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 14px 120px 14px 16px;
+    padding: 14px 16px 14px 16px;
     gap: 12px;
 }
 
@@ -578,7 +637,7 @@ a:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 14px 120px 14px 16px;
+    padding: 14px 16px 14px 16px;
     gap: 12px;
 
 }
@@ -592,8 +651,12 @@ a:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 14px 120px 14px 16px;
+    padding: 14px 16px 14px 16px;
     gap: 12px;
+}
+
+.table_zone{
+    width: 160px;
 }
 
 
@@ -653,6 +716,68 @@ a:hover {
 
 }
 
+@media (max-width: 1250px) {
+
+    .total{
+        display: none;
+    }
+
+    .card{
+        border-top: 0px solid #66686A52;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .scroll {
+        width: 810px;
+    
+    }
+
+}
+
+
+@media (min-width: 1250px) {
+
+    .footer {
+
+        display: none;
+
+    }
+
+    .topic{
+        display: none;
+    }
+    
+
+}
+
+@media (max-width: 1030px) {
+
+  
+
+    .card{
+        align-items: flex-start;
+    }
+
+    .scroll {
+        width: 660px;
+    
+    }
+    
+
+}
+
+@media (max-width: 870px) {
+
+
+    .scroll {
+        width: 520px;
+    
+    }
+    
+
+}
+
 @media (max-width: 770px) {
 
     .nav__position {
@@ -660,6 +785,11 @@ a:hover {
         display: none;
 
     }
+
+    .total{
+        display: none;
+    }
+
 
     .line {
 
@@ -678,6 +808,30 @@ a:hover {
 
     }
 
+
 }
+
+@media (max-width: 560px) {
+
+
+    .scroll {
+        width: 400px;
+    
+    }
+    
+
+}
+
+@media (max-width: 430px) {
+
+
+    .scroll {
+        width: 345px;
+    
+    }
+    
+
+}
+
 
 /* MEDIA REQUESTS END*/
