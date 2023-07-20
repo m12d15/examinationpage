@@ -19,64 +19,101 @@
 <body>
 
 
+    <!-- БЛОК open-app "НАЧАЛО"-->
+    <script>
+        window.addEventListener("DOMContentLoaded", function () {
+            document.querySelector("#app-btn").addEventListener("click", function () {
+                document.querySelector(".app-modal").classList.("hidden");
+            })
+        });
+    </script>
+    <div class="hidden  app-modal">
+        <div class="bg_app wallets">
+            <div class="open_app">
+                <div> <img src="./img/svg/metamask.svg" width="108" height="100"> </div>
+                <div>
+                    <div class="tally_info">Metamask</div>
+                    <div class="name_info">Connect to your Metamask Wallet</div>
+                </div>
+            </div>
+            <div class="open_app">
+                <div> <img src="./img/svg/walletconnect.svg" width="102" height="102"> </div>
+                <div>
+                    <div class="tally_info">WalletConnect</div>
+                    <div class="name_info">Scan with WalletConnect to connect</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- БЛОК open-app "КОНЕЦ"-->
+
+
     <!-- БЛОК mobile-header "НАЧАЛО"-->
     <section class="indent_mobile">
         <div>
             <div id="nav-menu-open" class="hidden mobile-menu">
-                <div>
-                    <div class="menu-left">
-                        <div class="mobile-navigation">
-                            <a href="./dashboard.html" class="header__links">Dashboard</a>
-                            <a href="./portfolio.html" class="header__links">Portfolio</a>
-                            <a href="./bonding.html" class="header__links">Bonding</a>
-                            <a href="./taxes.html" class="header__links">Taxes and Zones</a>
-                            <a href="./treasury.html" class="header__links">Treasury</a>
+                <div class="mob_nav">
+                    <div class="mob_links">
+                        <div class="menu-left">
+                            <div class="mobile-navigation">
+                                <a href="./dashboard.html" class="header__links">Dashboard</a>
+                                <a href="./portfolio.html" class="header__links">Portfolio</a>
+                                <a href="./bonding.html" class="header__links">Bonding</a>
+                                <a href="./taxes.html" class="header__links">Taxes and Zones</a>
+                                <a href="./treasury.html" class="header__links">Treasury</a>
+                            </div>
+                        </div>
+
+                        <div class="menu-right">
+                            <button class="menu-btn"><img src="./img/svg/exit.svg"> </button>
                         </div>
                     </div>
-
-                    <div class="menu-right">
-                        <button class="menu-btn"><img src="./img/svg/exit.svg"> </button>
+                    <div>
+                        <div class="mob_icon">
+                            <a href="https://twitter.com/" class="icon_rotate"><img src="./img/svg/twitter.svg"
+                                width="39" height="39"></a>
+                        <a href="https://www.instagram.com/" class="icon_rotate"><img
+                                src="./img/svg/instagram.svg" width="39" height="39"></a>
+                        <a href="https://facebook.com/" class="icon_rotate"><img src="./img/svg/facebook.svg"
+                                width="39" height="39"></a>
+                        <a href="https://discord.com/" class="icon_rotate"><img src="./img/svg/discord.svg"
+                                width="39" height="39"></a>
+                        <a href="https://web.telegram.org/" class="icon_rotate"><img
+                                src="./img/svg/telegram.svg" width="39" height="39"></a>
+                        <a href="#" class="icon_rotate"><img src="./img/svg/m.svg" width="39" height="39"></a>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <div class="header__social">
-                        <a href="#"><img src="./img/svg/twitter.svg" width="39" height="39"></a>
-                        <a href="#"><img src="./img/svg/instagram.svg" width="39" height="39"></a>
-                        <a href="#"><img src="./img/svg/facebook.svg" width="39" height="39"></a>
-                        <a href="#"><img src="./img/svg/discord.svg" width="39" height="39"></a>
-                        <a href="#"><img src="./img/svg/telegram.svg" width="39" height="39"></a>
-                        <a href="#"><img src="./img/svg/m.svg" width="39" height="39"></a>
-                    </div>
-                </div>
-
             </div>
 
             <header class="header-mobile">
                 <div class="mobile-direction">
-                        <div class="header-row">
-                            <div class="header__unit"><img src="./img/svg/logo.svg" width="135" height="17"> </img>
+                    <div class="header-row">
+                        <div class="header__unit"><img src="./img/svg/logo.svg" width="135" height="17"> </img>
+                        </div>
+                        <div class="header_mob_nav">
+                            <div class="header__language">
+                                <a href="#"><img src="./img/svg/flag.svg" width="22" height="16"></a>
+                                <div class="dropdown-content">
+                                    <a class="language_img_bg" href="#"><img src="./img/svg/cn.svg" width="22"
+                                            height="16"></a>
+                                    <a class="language_img_bg" href="#"><img src="./img/svg/de.svg" width="22"
+                                            height="16"></a>
+                                    <a class="language_img_bg" href="#"><img src="./img/svg/ru.svg" width="22"
+                                            height="16"></a>
+                                </div>
                             </div>
-                            <div class="header_mob_nav">
-                                <div class="header__language">
-                                    <a href="#"><img src="./img/svg/flag.svg" width="22" height="16"></a>
-                                    <div class="dropdown-content">
-                                        <a class="language_img_bg" href="#"><img src="./img/svg/cn.svg" width="22"
-                                                height="16"></a>
-                                        <a class="language_img_bg" href="#"><img src="./img/svg/de.svg" width="22"
-                                                height="16"></a>
-                                        <a class="language_img_bg" href="#"><img src="./img/svg/ru.svg" width="22"
-                                                height="16"></a>
-                                    </div>
-                                </div>
 
-                                <div>
-                                    <button id="open" class="menu-btn"><img src="./img/svg/btn.svg"> </button>
-                                </div>
+                            <div>
+                                <button id="open" class="menu-btn"><img src="./img/svg/btn.svg"> </button>
                             </div>
                         </div>
+                    </div>
             </header>
     </section>
     <!-- БЛОК mobile-header "КОНЕЦ"-->
+
+
 
 
     <!-- БЛОК header "НАЧАЛО"-->
@@ -146,8 +183,8 @@
                                 <div class="shine_background"></div>
                             </div>
                             <div class="nav__button">
-                                <input class="button_blue" type="submit" onclick="window.location.href = '';"
-                                    value="Open app">
+                                <input id="app-btn" class="button_blue" type="submit"
+                                    onclick="window.location.href = '';" value="Open app">
                                 <div class="nav__button_inf">
                                     <input class="button_black" type="submit"
                                         onclick="window.location.href = './whitepaper/whitepaper.pdf';"

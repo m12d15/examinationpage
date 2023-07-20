@@ -771,6 +771,21 @@ a:hover {
     .topic{
         display: none;
     }
+
+    .flex {
+        
+        justify-content: center;
+    }
+    
+
+}
+
+@media (max-width: 1250px) {
+
+    .flex {
+        
+        justify-content: center;
+    }
     
 
 }

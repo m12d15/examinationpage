@@ -748,6 +748,11 @@ a:hover {
         display: none;
     }
     
+    .flex {
+        
+        justify-content: center;
+    }
+    
 
 }
 
